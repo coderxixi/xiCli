@@ -5,7 +5,7 @@ const copydir = require('copy-dir');
 const template = require('template_js');
 const { extendDeep } = require('@jsmini/extend');
 
-
+//判断是否是模版
 function isTemplate(pathname) {
     return path.extname(pathname) === '.tmpl';
 }
@@ -13,7 +13,7 @@ function isTemplate(pathname) {
 function copyDir(from, to, options) {
     copydir.sync(from, to, options);
 }
-
+// 保证目标目录存在
 function mkdirSyncGuard(target) {
     try {
         fs.mkdirSync(target, { recursive: true });
@@ -38,12 +38,12 @@ function copyFile(from, to) {
 
     fs.writeFileSync(to, buffer);  
 }
-
+// 负责读取模版文件 将模版和数据渲染病得到最终字符串
 function readTmpl(from, data = {}) {
     const text = fs.readFileSync(from, { encoding: 'utf8' });
     return template(text, data);
 }
-
+//将指定的模版拷贝到指定的目录下，如果文件的后缀名不为.tmpl则直接拷贝文件
 function copyTmpl(from, to, data = {}) {
     if (!isTemplate(from)) {
         return copyFile(from, to);

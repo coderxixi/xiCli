@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "copy-dir": "^1.3.0",
     "inquirer": "^8.2.0",
     "validate-npm-package-name": "^5.0.0",
     "yargs": "^17.6.2"

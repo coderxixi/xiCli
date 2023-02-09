@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const process  = require("process");
 const yargs=require('yargs')
-const {runInitPrompts}=require('./core/inquirer')
+const {runInitPrompts}=require('./core/run-prompts')
 // process.argv[2] 就是传给命令的参数
 console.log('脚手架开发',process.argv[2]);
 //设置版本号

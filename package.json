@@ -16,6 +16,7 @@
     "@jsmini/extend": "^0.3.3",
     "copy-dir": "^1.3.0",
     "inquirer": "^8.2.0",
+    "shelljs": "^0.8.5",
     "template_js": "^2.4.0",
     "validate-npm-package-name": "^5.0.0",
     "yargs": "^17.6.2"

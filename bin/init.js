@@ -19,7 +19,7 @@ function init(argv, answers) {
     const { name } = option;
 
     const pathname = String(
-        typeof argv._[1] !== "undefined" ? argv._[1] : name
+        typeof argv[1] !== "undefined" ? argv[1] : name
     );
 
     // 运行命令
